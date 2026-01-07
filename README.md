@@ -30,23 +30,23 @@ This project implements an Advanced Graph-RAG (Retrieval-Augmented Generation) s
        -e NEO4J_AUTH=neo4j/your_password \
        neo4j:latest
 
-3. **Environment Setup: Create a .env file in the root directory:**
-    GEMINI_API_KEY=your_google_api_key
+3. **Environment Setup: Create a .env file in the root directory:** <br>
+    GEMINI_API_KEY=your_google_api_key <br>
     NEO4J_PASSWORD=your_password
 
-4. **Installation:**
+4. **Installation:** <br>
     pip install -r requirements.txt
 
-5. **Data Ingestion:**
+5. **Data Ingestion:** <br>
     **1. Populate the Graph** <br>
-        python neo4j_ingest.py
+        python neo4j_ingest.py <br>
     **2. Process the PDF Guidelines** <br>
         python ingest.py
 
-6. **Run**
-    To interact with the system in real-time:
+6. **Run** <br>
+    To interact with the system in real-time: <br>
     python rag.py
 
-7. **Run Evaluation**
-    To see the performance comparison (Baseline vs. Graph):
+7. **Run Evaluation** <br>
+    To see the performance comparison (Baseline vs. Graph): <br>
     python evaluation.py
