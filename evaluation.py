@@ -20,7 +20,7 @@ vectorstore = FAISS.load_local(
     allow_dangerous_deserialization=True
 )
 
-retriever = vectorstore.as_retriever(search_kwargs={"k": 4})
+retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 
 # LLM
 llm = ChatGoogleGenerativeAI(
