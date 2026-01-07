@@ -38,9 +38,9 @@ This project implements an Advanced Graph-RAG (Retrieval-Augmented Generation) s
     pip install -r requirements.txt
 
 5. **Data Ingestion:**
-    **1. Populate the Graph**
+    **1. Populate the Graph** <br>
         python neo4j_ingest.py
-    **2. Process the PDF Guidelines**
+    **2. Process the PDF Guidelines** <br>
         python ingest.py
 
 6. **Run**
