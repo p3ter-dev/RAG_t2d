@@ -40,7 +40,7 @@ def answer_question(question: str) -> str:
     Graph Knowledge:
     {graph_context}
 
-    Guideline Excerpts:
+    Guidelines:
     {vector_context}
     """
 
