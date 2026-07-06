@@ -2,18 +2,18 @@ import os
 from dotenv import load_dotenv
 
 from langchain_community.vectorstores import FAISS
-from langchain_google_genai import (
-    GoogleGenerativeAIEmbeddings,
-    ChatGoogleGenerativeAI
-)
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_google_genai import ChatGoogleGenerativeAI
 from prompts import RAG_PROMPT
 from graph_retriever import query_graph
 
 load_dotenv()
 
 # Load vector store
-embeddings = GoogleGenerativeAIEmbeddings(
-    model="models/text-embedding-004"
+embeddings = HuggingFaceEmbeddings(
+    model_name="BAAI/bge-base-en-v1.5",
+    model_kwargs={"device": "cpu"},
+    encode_kwargs={"normalize_embeddings": True},
 )
 vectorstore = FAISS.load_local(
     "vector_store",
